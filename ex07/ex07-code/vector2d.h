@@ -35,4 +35,6 @@ private:
     double y;
 };
 
-#endif
+#include "vector2d.hpp"
+
+#endif /* VECTOR2D_H_ */
