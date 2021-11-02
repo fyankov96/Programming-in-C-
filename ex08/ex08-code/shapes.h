@@ -1,79 +1,79 @@
 #ifndef _shapes_
 #define _shapes_
 
-class Shape {
+class Shape
+{
 
 public:
+    virtual double area() = 0;
 
+    virtual double perimeter() = 0;
 
-private:
+    virtual double height() = 0;
 
+    virtual double width() = 0;
+
+    virtual void rotate(){
+
+    };
 };
 
-class Rectangle : public Shape {
+class Rectangle : public Shape
+{
 public:
+    Rectangle(double h, double w);
 
-    Rectangle(double a, double b);
+    double height();
+
+    double width();
 
     double area();
 
     double perimeter();
 
+    void rotate();
+
+private:
+    double w;
+    double h;
+};
+
+class Square : public Shape
+{
+
+public:
+    Square(double s);
+
     double height();
 
     double width();
-
-    double rotate();
-
-private:
-
-    double x;
-    double y;
-};
-
-class Square : public Shape {
-
-public:
-
-    Square(double a);
-
-     double area();
 
     double perimeter();
 
+    double area();
+
+private:
+    double l;
+};
+
+class Circle : public Shape
+{
+
+public:
+    Circle(double r);
+
     double height();
 
     double width();
 
-    double rotate();
-
-private:
-
-    double z;
-};
-
-class Circle : public Shape {
-
-public:
-
-    Circle(double a);
-
-     double area();
+    double area();
 
     double perimeter();
 
-    double height();
-
-    double width();
-
-    double rotate();
-
 private:
-
-    double i;
+    double r;
 };
 
- 
-#include "shapes.hpp"
+//#include "shapes.cpp"
 
 #endif /* SHAPES_H_ */
